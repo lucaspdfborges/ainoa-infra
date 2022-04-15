@@ -2,20 +2,20 @@ import datetime
 import socket as s
 import ast
 import json
+import numpy as np
 
 from post import post_data, data_to_post_later, post_late_data
 from auth import authenticate, refresh_authentication
 
-
 # ----------------------------------
 # JSON VARIABLES --------------------
 # ----------------------------------
+
 dadotipo_dict = json.load(open('dadostipos.json', 'r'))
 sensores_dict = json.load(open('sensores.json', 'r'))
 
 secret_dict = json.load(open('secret.json', 'r'))
 post_data_url = secret_dict['post_data_url']
-
 
 # ----------------------------------
 # AUTH VARIABLES --------------------
